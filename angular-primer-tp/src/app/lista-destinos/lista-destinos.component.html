@@ -1,0 +1,25 @@
+<div class="container-md col-6">
+  <form>
+    <div class="form-group">
+      <label>Nombre del Destino</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" #nombre>
+      <small class="form-text text-muted">Lugar donde te gustaria visitar.</small>
+    </div>
+    <div class="form-group">
+      <label>Imagen</label>
+      <input type="text" class="form-control" #img>
+      <small class="form-text text-muted">imagen dle destino gustaria visitar.</small>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="guardar(nombre.value,img.value)">Submit</button>
+  </form>
+</div>
+<hr>
+<div class="row">
+  <ul>
+    <li>
+      
+        <app-destino-viaje *ngFor="let x of listaviajes" [destinos]="x"></app-destino-viaje>
+      
+    </li>
+  </ul>
+</div>
